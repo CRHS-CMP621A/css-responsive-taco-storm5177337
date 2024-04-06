@@ -1,46 +1,46 @@
 # CSS Responsive Taco
 
-## Steps
+## Steps for the initial layout.
 
-1. Setup the initial layout.
+1. Top (grid-areas)
 
-    a. Top (grid-areas)
+   ![Markdown](assets/taco_grid_top.png)
 
-![Markdown](assets/taco_grid_top.png)
+2. Menu (grid RAM)
 
-    b. Menu (grid RAM)
+   ![Markdown](assets/taco_grid_options.png)
 
-![Markdown](assets/taco_grid_options.png)
+3. Features (grid RAM)
 
-c. Features (grid RAM)
+   ![Markdown](assets/taco_features.png)
 
-![Markdown](assets/taco_features.png)
+4. About (grid with column of 400px and 1fr)
 
-d. About (grid with column of 400px and 1fr)
+   ![Markdown](assets/taco_info_big.png)
 
-![Markdown](assets/taco_info_big.png)
+5. Gallery (grid RAM)
 
-e. Gallery (grid RAM)
+   ![Markdown](assets/taco_gallery_big.png)
 
-![Markdown](assets/taco_gallery_big.png)
+6. Gallery h2 (set grid columns to go across entire top row)
 
-f. Gallery h2 (set grid columns to go across entire top row)
+   ```css
+   .gallery h2 {
+   /* use grid columns to places insta grams across top of gallery */
+   ```
 
-```css
-.gallery h2 {
-  /* use grid columns to places insta grams across top of gallery */
-```
+## Adding Media Query at 700px
 
-2. Add Media Query at 700px.
-   a. Top layout (grid areas)
+1. Top layout (grid areas)
 
    ![Markdown](assets/taco_top_medium.png)
 
-b. About (grid only 1 column at 1fr )
+2. About (grid only 1 column at 1fr )
 
-![Markdown](assets/taco_info_medium.png)
+   ![Markdown](assets/taco_info_medium.png)
 
-3. Add media query at 500px.
-   a. Top layout (grid areas)
+## Adding media query at 500px.
+
+1. Top layout (grid areas)
 
    ![Markdown](assets/taco_top_small.png)
