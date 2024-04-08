@@ -23,7 +23,7 @@ img {
 }
 
 .top {
-/*   display: grid; */
+  display: grid;
   grid-gap: 20px;
   /* set initial grid layout for top */
 }
