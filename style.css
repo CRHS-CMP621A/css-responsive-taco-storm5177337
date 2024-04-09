@@ -25,20 +25,21 @@ img {
 .top {
   display: grid;
   grid-gap: 20px;
-  /* set initial grid layout for top */
+  grid-template-areas: 
+  "hero hero cta1"
+  "hero hero cta2";
 }
 
 .cta1 {
-  /* set grid-area */
-  
+  grid-area: cta1;
 }
 
 .cta2 {
-  /* set grid-area */
+  grid-area: cta2;
 }
 
 .hero {
-  /* set grid-area */
+  grid-area: hero;
   min-height: 400px;
   background: white url(images/taco.jpg);
   background-size: cover;
@@ -75,8 +76,9 @@ img {
 /* Navigation */
 
 .menu ul {
-/*   display: grid; */
-/* add grid RAM min of 100px */
+  display: grid;
+  /* add grid RAM min of 160px */
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   grid-gap: 10px;
   padding: 0;
   list-style: none;
@@ -102,7 +104,8 @@ img {
 .features {
   display: grid;
   grid-gap: 20px;
- /* add grid RAM with 200px min. */
+  /* add grid RAM with 200px min. */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .feature {
@@ -124,18 +127,18 @@ img {
 
 .about {
   background: white;
-  padding:50px;
-  
-  /*display: grid;*/
-  
+  padding: 50px;
+  display: grid;
+  grid-template-columns: 400px 1fr;
 }
 
 /* Gallery! */
 
 .gallery {
-/*   display: grid; */
+  display: grid;
   grid-gap: 20px;
   /* add grid RAM with min 200px. */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .gallery img {
@@ -148,6 +151,7 @@ img {
   grid-template-columns: 1fr auto 1fr;
   grid-gap: 20px;
   align-items: center;
+  grid-column: 1 / -1; /* spans across no matter the screen size! */
 }
 
 .gallery h2:before, .gallery h2:after {
@@ -165,9 +169,29 @@ img {
 /* at maxwidth 700px */
 /* change top layout */
 /* change about layout */
+@media (max-width: 700px) {
+  .top {
+    display: grid;
+    grid-template-areas: 
+    "hero hero"
+    "hero hero"
+    "cta1 cta2";
+  }
 
+  .about {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
 
 /* at maxwidth 500px */
 /* change top layout */
-
-
+@media (max-width: 500px) {
+  .top {
+    display: grid;
+    grid-template-areas: 
+    "hero"
+    "cta1"
+    "cta2";
+  }
+}
